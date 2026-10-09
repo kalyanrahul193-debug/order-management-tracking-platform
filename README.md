@@ -55,14 +55,30 @@ A full-stack Order Management & Tracking Platform built with **Java Spring Boot*
 
 ### Backend Setup
 
+Using PowerShell (Windows):
+```powershell
+cd backend
+.\mvnw.ps1 spring-boot:run
+```
+
+Or using standard Maven:
 ```bash
 cd backend
-mvnw.cmd spring-boot:run
+mvn spring-boot:run
 ```
 
 The backend starts on **http://localhost:8080**
 
-> H2 Console available at http://localhost:8080/h2-console (JDBC URL: `jdbc:h2:mem:orderdb`)
+> Default development database: H2 in-memory (`jdbc:h2:mem:orderdb`), console at `http://localhost:8080/h2-console`.
+
+#### Running with Oracle Database
+To run with an external Oracle Database:
+1. Initialize the schema using `backend/src/main/resources/schema-oracle.sql` and `data-oracle.sql`.
+2. Configure credentials in `backend/src/main/resources/application-oracle.properties`.
+3. Launch with the Oracle profile active:
+```powershell
+.\mvnw.ps1 spring-boot:run -Dspring-boot.run.profiles=oracle
+```
 
 ### Frontend Setup
 
