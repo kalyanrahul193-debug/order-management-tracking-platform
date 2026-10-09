@@ -1,10 +1,4 @@
--- Admin user
-INSERT INTO users (username, email, password, role, created_at) 
-VALUES ('admin', 'admin@orderplatform.com', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'ROLE_ADMIN', CURRENT_TIMESTAMP);
-
--- Customer user
-INSERT INTO users (username, email, password, role, created_at) 
-VALUES ('customer', 'customer@orderplatform.com', '$2a$10$dXJ3SW6G7P50lGmMQgel2u0PC3MKMHqDm5jS23wFmDhPqVsXuaaGO', 'ROLE_CUSTOMER', CURRENT_TIMESTAMP);
+-- Sample Products initialized below, Users initialized dynamically via DataInitializer
 
 -- Sample Products
 INSERT INTO products (name, description, category, price, stock_quantity, image_url, active)
