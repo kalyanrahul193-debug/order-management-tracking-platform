@@ -1,0 +1,74 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+  min-height: calc(100vh - 56px);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+/* Status Badges */
+.badge.bg-placed { background-color: #0dcaf0 !important; color: #000; }
+.badge.bg-confirmed { background-color: #0d6efd !important; }
+.badge.bg-processing { background-color: #ffc107 !important; color: #000; }
+.badge.bg-shipped { background-color: #0dcaf0 !important; color: #000; }
+.badge.bg-in_transit { background-color: #fd7e14 !important; color: #fff; }
+.badge.bg-delivered { background-color: #198754 !important; }
+.badge.bg-cancelled { background-color: #dc3545 !important; }
+
+/* Tracking Timeline Styles */
+.tracking-timeline {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.tracking-timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 5px;
+  bottom: 0;
+  width: 2px;
+  background-color: #dee2e6;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -30px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px #0d6efd;
+}
+
+.timeline-content {
+  padding-bottom: 10px;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 4px;
+}
