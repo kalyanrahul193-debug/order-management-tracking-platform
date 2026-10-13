@@ -291,6 +291,5 @@ npm run build
 ---
 
 ## 👤 Author
-- **Developer**: Full-Stack Software Engineer
 - **GitHub**: [@kalyanrahul193-debug](https://github.com/kalyanrahul193-debug)
 
